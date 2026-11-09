@@ -73,19 +73,19 @@ int main(void)
             printf("F2(%.4lf) = %lf\n\n", x, f2);
             break;
         case 3:
-            printf("Произведение = %lf\n\n", product(f1, f2));
+            printf("Произведение = %lf\n", product(f1, f2));
             break;
         case 4:
-            printf("Разность квадратов = %lf\n\n", diff_squares(f1, f2));
+            printf("Разность квадратов = %lf\n", diff_squares(f1, f2));
             break;
         case 5:
-            printf("Удвоенная сумма = %lf\n\n", double_sum(f1, f2));
+            printf("Удвоенная сумма = %lf\n", double_sum(f1, f2));
             break;
         case 0:
-            printf("Выход из меню\n\n");
+            printf("Выход из меню\n");
             break;
         default:
-            printf("Неизвестный пункт меню\n\n");
+            printf("Неизвестный пункт меню\n");
             break;
         }
     } while (choice != 0);
@@ -104,13 +104,13 @@ int main(void)
     if (scanf("%lf", &eps) != 1) return 1;
 
     if (N < 1 || eps <= 0) {
-        printf("Ошибка: N должно быть >= 1, eps > 0\n\n");
+        printf("Ошибка: N должно быть >= 1, eps > 0\n");
     }
     else
     {
         double s_std = sin(x);
 
-        printf("\n  N |    sin_N     |  отклонение\n");
+        printf("  N |    sin_N     |  отклонение\n");
         printf("----+--------------+--------------\n");
         for (int i = 1; i <= N; i++)
         {
@@ -126,7 +126,7 @@ int main(void)
             eps, s_eps, s_eps - s_std);
     }
 
-    // Задание 2 (вариант 1). e^(-x) через ряд
+    // Задание 2 e^(-x) через ряд
     printf("=== Задание 2. Вариант 1: e^(-x) ===\n");
     printf("e^(-x) = 1 - x + x^2/2! - x^3/3! + ...\n");
     printf("Введите x: ");
@@ -143,7 +143,7 @@ int main(void)
     {
         double e_std = exp(-x);
 
-        printf("\n  N |   exp_N      |  отклонение\n");
+        printf("  N |   exp_N      |  отклонение\n");
         printf("----+--------------+--------------\n");
         for (int i = 1; i <= N; i++)
         {
